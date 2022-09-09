@@ -4,6 +4,7 @@ import UseReducerScreen from './useReducerScreen';
 import UseRefScreen from './useRefScreen';
 import UseStateScreen from './useStateScreen';
 import UseCallbackMemoScreen from './useCallbackMemoScreen';
+import CustomScreen from './customScreen';
 export {
   UseStateScreen,
   UseEffectScreen,
@@ -11,4 +12,5 @@ export {
   UseRefScreen,
   UseReducerScreen,
   UseCallbackMemoScreen,
+  CustomScreen,
 };

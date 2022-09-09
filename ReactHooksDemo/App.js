@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {RoutesName} from './src/Routes/route';
 import HomeScreen from './src/HomeScreen/homeScreen';
 import {
+  CustomScreen,
   UseCallbackMemoScreen,
   UseContextScreen,
   UseEffectScreen,
@@ -45,6 +46,8 @@ const App = () => {
             name={RoutesName.USECALLBACKMEMO}
             component={UseCallbackMemoScreen}
           />
+
+          <Stack.Screen name={RoutesName.CUSTOM} component={CustomScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </UserContext.Provider>

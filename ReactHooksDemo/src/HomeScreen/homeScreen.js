@@ -44,6 +44,7 @@ const HomeScreen = ({navigation}) => {
       <Button
         title={TRANSLATETEXT.CustomHook}
         buttonStyle={styles.buttonStyle}
+        onPress={() => onClick(RoutesName.CUSTOM)}
       />
     </View>
   );

@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Text} from 'react-native-elements';
 import {UserContext} from '../../../App';
-import {Normal_Margin} from '../../AppConst/appConst';
+import {Scale} from '../../AppConst/appConst';
 import {TRANSLATETEXT} from '../../AppTestFiles/en';
 
 const UseContextScreen = () => {
@@ -20,7 +20,7 @@ const UseContextScreen = () => {
 
 const styles = StyleSheet.create({
   containerStyle: {flex: 1, alignItems: 'center', justifyContent: 'center'},
-  buttonStyle: {marginTop: Normal_Margin},
+  buttonStyle: {marginTop: Scale.Normal_Margin},
 });
 
 export default UseContextScreen;

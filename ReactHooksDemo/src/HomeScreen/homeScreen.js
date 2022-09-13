@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Button} from 'react-native-elements';
-import {Normal_Margin} from '../AppConst/appConst';
+import {Scale} from '../AppConst/appConst';
 import {TRANSLATETEXT} from '../AppTestFiles/en';
 import {RoutesName} from '../Routes/route';
 
@@ -52,7 +52,7 @@ const HomeScreen = ({navigation}) => {
 
 const styles = StyleSheet.create({
   containerStyle: {flex: 1, alignItems: 'center', justifyContent: 'center'},
-  buttonStyle: {marginTop: Normal_Margin},
+  buttonStyle: {marginTop: Scale.Normal_Margin},
 });
 
 export default HomeScreen;

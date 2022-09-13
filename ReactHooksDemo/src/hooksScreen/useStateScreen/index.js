@@ -1,26 +1,26 @@
 import React, {useState} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Button} from 'react-native-elements';
-import {Button_Width, Normal_Margin} from '../../AppConst/appConst';
+import {Color, Scale} from '../../AppConst/appConst';
 import {TRANSLATETEXT} from '../../AppTestFiles/en';
 
 const UseStateScreen = () => {
-  const [color, setColor] = useState('white');
+  const [color, setColor] = useState(Color.White);
   return (
     <View style={styles.containerStyle(color)}>
       <Button
         title={TRANSLATETEXT.Red}
-        onPress={() => setColor('red')}
+        onPress={() => setColor(Color.Red)}
         buttonStyle={styles.buttonStyle}
       />
       <Button
         title={TRANSLATETEXT.Green}
-        onPress={() => setColor('green')}
+        onPress={() => setColor(Color.Green)}
         buttonStyle={styles.buttonStyle}
       />
       <Button
         title={TRANSLATETEXT.White}
-        onPress={() => setColor('white')}
+        onPress={() => setColor(Color.White)}
         buttonStyle={styles.buttonStyle}
       />
     </View>
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
       backgroundColor: bgColor,
     };
   },
-  buttonStyle: {marginTop: Normal_Margin, width: Button_Width},
+  buttonStyle: {marginTop: Scale.Normal_Margin, width: Scale.Button_Width},
 });
 
 export default UseStateScreen;

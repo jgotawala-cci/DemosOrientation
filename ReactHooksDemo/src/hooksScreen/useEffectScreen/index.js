@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Button, Text} from 'react-native-elements';
-import {Normal_Margin} from '../../AppConst/appConst';
+import {Scale} from '../../AppConst/appConst';
 import {TRANSLATETEXT} from '../../AppTestFiles/en';
 
 const UseEffectScreen = () => {
@@ -33,7 +33,7 @@ const UseEffectScreen = () => {
 
 const styles = StyleSheet.create({
   containerStyle: {flex: 1, alignItems: 'center', justifyContent: 'center'},
-  buttonStyle: {marginTop: Normal_Margin},
+  buttonStyle: {marginTop: Scale.Normal_Margin},
 });
 
 export default UseEffectScreen;

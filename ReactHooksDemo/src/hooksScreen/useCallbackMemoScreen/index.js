@@ -1,11 +1,10 @@
 import React, {useCallback, useMemo, useState} from 'react';
 import {View, StyleSheet, ScrollView} from 'react-native';
 import {Button, Text} from 'react-native-elements';
-import {Normal_Margin} from '../../AppConst/appConst';
+import {Scale} from '../../AppConst/appConst';
 import {TRANSLATETEXT} from '../../AppTestFiles/en';
 
 const expensiveCalculation = num => {
-  console.log('Calculating...');
   for (let i = 0; i < 1000000000; i++) {
     num += 1;
   }
@@ -21,7 +20,7 @@ const UseCallbackMemoScreen = () => {
     setCount(c => c + 1);
   };
   const addTodo = useCallback(() => {
-    setTodos(t => [...t, 'New Todo']);
+    setTodos(t => [...t, 'New Todo ' + todos?.length]);
   }, [todos]);
 
   return (
@@ -52,7 +51,7 @@ const UseCallbackMemoScreen = () => {
 
 const styles = StyleSheet.create({
   containerStyle: {flex: 1, alignItems: 'center', justifyContent: 'center'},
-  buttonStyle: {marginTop: Normal_Margin},
+  buttonStyle: {marginTop: Scale.Normal_Margin},
 });
 
 export default UseCallbackMemoScreen;

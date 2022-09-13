@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Input, Text} from 'react-native-elements';
-import {Normal_Margin} from '../../AppConst/appConst';
+import {Scale} from '../../AppConst/appConst';
 import {TRANSLATETEXT} from '../../AppTestFiles/en';
 
 const UseRefScreen = () => {
@@ -30,7 +30,7 @@ const UseRefScreen = () => {
 
 const styles = StyleSheet.create({
   containerStyle: {flex: 1, alignItems: 'center', justifyContent: 'center'},
-  buttonStyle: {marginTop: Normal_Margin},
+  buttonStyle: {marginTop: Scale.Normal_Margin},
 });
 
 export default UseRefScreen;

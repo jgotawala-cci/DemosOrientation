@@ -7,6 +7,7 @@ import {
   TouchableHighlight,
   View,
 } from 'react-native';
+import {Color, Scale} from './appConst';
 import NewNoteForms from './newNoteForms';
 import {useNotesStore} from './noteContext';
 
@@ -22,7 +23,7 @@ const HomePage = observer(() => {
       <Text style={styles.headerStyle}>Some Notes</Text>
       <NewNoteForms />
       <ScrollView>
-        {noteStore.notes?.map(item => {
+        {noteStore?.notes?.map(item => {
           return (
             <TouchableHighlight onPress={() => onRemove(item?.id)}>
               <Text style={styles.title}>{item?.text}</Text>
@@ -36,11 +37,11 @@ const HomePage = observer(() => {
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 15,
-    color: 'black',
-    padding: 10,
+    fontSize: Scale.titleFonst,
+    color: Color.Black,
+    padding: Scale.normalPadding,
   },
-  headerStyle: {fontSize: 20, color: 'black'},
+  headerStyle: {fontSize: Scale.headerFont, color: Color.Black},
 });
 
 export default HomePage;

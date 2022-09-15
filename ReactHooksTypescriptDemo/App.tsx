@@ -36,7 +36,6 @@ const App = () => {
             name={RoutesName.USECONTEXT}
             component={UseContextScreen}
           />
-
           <Stack.Screen name={RoutesName.USEREF} component={UseRefScreen} />
           <Stack.Screen
             name={RoutesName.USEREDUCER}
@@ -46,7 +45,6 @@ const App = () => {
             name={RoutesName.USECALLBACKMEMO}
             component={UseCallbackMemoScreen}
           />
-
           <Stack.Screen name={RoutesName.CUSTOM} component={CustomScreen} />
         </Stack.Navigator>
       </NavigationContainer>

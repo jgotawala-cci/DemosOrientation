@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, ViewStyle} from 'react-native';
 import {Button} from 'react-native-elements';
 import {Color, Scale} from '../../AppConst/appConst';
 import {TRANSLATETEXT} from '../../AppTestFiles/en';
@@ -7,7 +7,7 @@ import {TRANSLATETEXT} from '../../AppTestFiles/en';
 const UseStateScreen = () => {
   const [color, setColor] = useState<string>(Color.White);
   return (
-    <View style={styles.containerStyle(color)}>
+    <View style={ContainerStyle(color)}>
       <Button
         title={TRANSLATETEXT.Red}
         onPress={() => setColor(Color.Red)}
@@ -27,15 +27,14 @@ const UseStateScreen = () => {
   );
 };
 
+const ContainerStyle = (bgColor: string): ViewStyle => ({
+  flex: 1,
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: bgColor,
+});
+
 const styles = StyleSheet.create({
-  containerStyle: (bgColor: string) => {
-    return {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: bgColor,
-    };
-  },
   buttonStyle: {marginTop: Scale.Normal_Margin, width: Scale.Button_Width},
 });
 

@@ -5,7 +5,7 @@ import {Scale} from '../AppConst/appConst';
 import {TRANSLATETEXT} from '../AppTestFiles/en';
 import {RoutesName} from '../Routes/route';
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({navigation}: {navigation: any}) => {
   const onClick = (route: string) => {
     navigation.navigate(route);
   };

@@ -23,7 +23,7 @@ const UseReducerScreen = () => {
     <View style={styles.containerStyle}>
       <Input
         autoCompleteType
-        placeholder={'Type a todo, then hit enter!'}
+        placeholder={'Type a todo'}
         defaultValue={todo}
         onChangeText={value => setTodo(value)}
       />

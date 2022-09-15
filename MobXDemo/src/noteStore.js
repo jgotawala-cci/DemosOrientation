@@ -1,10 +1,11 @@
+import uuid from 'react-native-uuid';
 export const createNotesStore = () => {
   return {
     notes: [],
     addNote(text) {
       this.notes.push({
         text,
-        id: text,
+        id: uuid.v4(),
       });
     },
     removeNote(id) {

@@ -10,7 +10,6 @@ const NewNoteForms = () => {
   const addNote = () => {
     if (noteText !== '') {
       noteStore.addNote(noteText);
-      setNoteText('');
     }
   };
 

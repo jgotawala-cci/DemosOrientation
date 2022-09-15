@@ -1,5 +1,5 @@
 export const TRANSLATETEXT = {
-  Title: 'Typescript Demo',
+  Title: 'Typescript Hooks Demo',
   UseState: 'useState Example',
   UseEffect: 'useEffect Example',
   UseContext: 'useContext Example',

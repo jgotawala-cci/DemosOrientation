@@ -4,7 +4,7 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  TouchableHighlight,
+  TouchableOpacity,
   View,
 } from 'react-native';
 import {Color, Scale} from './appConst';
@@ -20,14 +20,14 @@ const HomePage = observer(() => {
 
   return (
     <View>
-      <Text style={styles.headerStyle}>Some Notes</Text>
+      <Text style={styles.headerStyle}>{'Some Notes'}</Text>
       <NewNoteForms />
       <ScrollView>
         {noteStore?.notes?.map(item => {
           return (
-            <TouchableHighlight onPress={() => onRemove(item?.id)}>
+            <TouchableOpacity key={item?.id} onPress={() => onRemove(item?.id)}>
               <Text style={styles.title}>{item?.text}</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
           );
         })}
       </ScrollView>

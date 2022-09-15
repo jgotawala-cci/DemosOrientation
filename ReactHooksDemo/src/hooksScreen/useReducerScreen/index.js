@@ -12,7 +12,6 @@ const UseReducerScreen = () => {
   const onAdd = () => {
     if (todo !== '') {
       dispatch(actionCreators.add(todo));
-      setTodo('');
     }
   };
 
@@ -23,7 +22,7 @@ const UseReducerScreen = () => {
   return (
     <View style={styles.containerStyle}>
       <Input
-        placeholder={'Type a todo, then hit enter!'}
+        placeholder={'Type a todo'}
         defaultValue={todo}
         onChangeText={value => setTodo(value)}
       />
